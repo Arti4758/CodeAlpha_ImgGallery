@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K-POP Neon Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Prompt&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <h1>💜 BLACKPINK NEON GALLERY 💙</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">BLACKPINK</button>
+    <button onclick="filterImages('jisoo')">JISOO</button>
+    <button onclick="filterImages('jennie')">JENNIE</button>
+    <button onclick="filterImages('rose')">ROSÉ</button>
+    <button onclick="filterImages('lisa')">LISA</button>
+  </div>
+
+  <!-- Image Gallery -->
+  <div class="gallery">
+    <div class="image all"><img src="images/img1.jpg" alt="ALL 1" onclick="openLightbox(this)" /></div>
+    <div class="image all"><img src="images/img2.jpg" alt="ALL 2" onclick="openLightbox(this)" /></div>
+    <div class="image jisoo"><img src="images/img3.jpg" alt="JISOO 1" onclick="openLightbox(this)" /></div>
+    <div class="image jisoo"><img src="images/img4.jpg" alt="JISOO 2" onclick="openLightbox(this)" /></div>
+    <div class="image jennie"><img src="images/img5.jpg" alt="JENNIE 1" onclick="openLightbox(this)" /></div>
+    <div class="image jennie"><img src="images/img6.jpg" alt="JENNIE 2" onclick="openLightbox(this)" /></div>
+    <div class="image rose"><img src="images/img7.jpg" alt="ROSÉ 1" onclick="openLightbox(this)" /></div>
+    <div class="image rose"><img src="images/img8.jpg" alt="ROSÉ 2" onclick="openLightbox(this)" /></div>
+    <div class="image lisa"><img src="images/img9.jpg" alt="LISA 1" onclick="openLightbox(this)" /></div>
+    <div class="image lisa"><img src="images/img10.jpg" alt="LISA 2" onclick="openLightbox(this)" /></div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" />
+    <div class="lightbox-nav">
+      <button onclick="prevImage(event)">❮ Prev</button>
+      <button onclick="nextImage(event)">Next ❯</button>
+    </div>
+  </div>
+
+  <!-- Optional Music Toggle -->
+  <audio id="bg-music" src="bp.mp3" loop></audio>
+  <button onclick="toggleMusic()" id="music-btn">🎶 Toggle Music</button>
+   
+  <script src="script.js"></script>
+</body>
+</html>
